@@ -9,4 +9,15 @@ import-Module ADDSDeployment
 
 install-ADDSForest
 ```
+2. Change the DNS from loopback to static DNS
+```shell
+Get-DNSClientServerAddress
+Set-DNSClientServerAddress -InterfaceIndex i -ServerAddress ip
+```
+3. Adding the host to the domain
 
+   ```shell
+   Get-DNSClientServerAddress
+   Set-DNSClientServerAddress -InterfaceIndex i -ServerAddress ip
+   Add-Computer -DomainName "domain" -Credentials domain/user -Force -Restart
+   ```

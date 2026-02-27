@@ -4,5 +4,9 @@
 
 ```shell
 Install-Windows-Feature AD-Domain-Services -IncludeManagementTools
+
+import-Module ADDSDeployment
+
+install-ADDSForest
 ```
 
